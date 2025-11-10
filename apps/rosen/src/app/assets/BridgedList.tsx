@@ -48,12 +48,12 @@ export const BridgedList = ({ value }: BridgedListProps) => {
               <Network loading={isLoading} name={item.chain} />
               <Amount
                 loading={isLoading}
-                value={getDecimalString(item.amount, value.significantDecimals)}
+                value={getDecimalString(item.amount, value.significantDecimal)}
               />
             </Box>
             <Box fontSize={'0.875rem'} color="text.secondary" mb={-1}>
               <Identifier
-                href={'tokenUrl'}
+                href={value.tokenUrl}
                 loading={isLoading}
                 value={item.birdgedTokenId}
               />

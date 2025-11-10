@@ -25,7 +25,7 @@ export const getFullAssetData = (item: Assets) => {
 
   const coldAmount = getDecimalString(
     cold?.amount || 0,
-    item.significantDecimals,
+    item.significantDecimal,
   );
 
   const hot = item.lockedPerAddress?.find((item) => {
@@ -34,19 +34,16 @@ export const getFullAssetData = (item: Assets) => {
 
   const hotUrl = getAddressUrl(item.chain, hot?.address);
 
-  const hotAmount = getDecimalString(
-    hot?.amount || 0,
-    item.significantDecimals,
-  );
+  const hotAmount = getDecimalString(hot?.amount || 0, item.significantDecimal);
 
   const lockedAmount = getDecimalString(
     (hot?.amount || 0) + (cold?.amount || 0),
-    item.significantDecimals,
+    item.significantDecimal,
   );
 
   const bridgedAmount = getDecimalString(
     item.bridged ?? '0',
-    item.significantDecimals,
+    item.significantDecimal,
   );
 
   return {

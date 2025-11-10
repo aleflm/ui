@@ -1,7 +1,5 @@
 import { Filters } from '@rosen-bridge/ui-kit/dist/components/common/smartSearch/server';
 
-import { getTokenMap } from '@/tokenMap/getServerTokenMap';
-
 import {
   getAsset as repositoryGetAsset,
   getAllAssets as repositoryGetAllAssets,
@@ -33,15 +31,5 @@ export const getAsset = async (id: string) => {
  * @param filters
  */
 export const getAllAssets = async (filters: Filters) => {
-  const tokenMap = await getTokenMap();
-
-  const assets = await repositoryGetAllAssets(filters);
-
-  return {
-    total: assets.total,
-    items: assets.items.map((asset) => ({
-      ...asset,
-      significantDecimals: tokenMap.getSignificantDecimals(asset.id) || 0,
-    })),
-  };
+  return await repositoryGetAllAssets(filters);
 };
