@@ -70,6 +70,25 @@ doge:
     # - url:
     #   username:
     #   password:
+firo:
+  addresses:
+    lock:
+    eventTrigger:
+    permit:
+    fraud:
+    commitment:
+  tokens:
+    rwt:
+  initialHeight:
+  explorerUrl: https://explorer.firo.org/api
+  rpcConnections:
+    - url:
+      username:
+      password:
+    # Add more RPC connections as needed
+    # - url:
+    #   username:
+    #   password:
 ethereum:
   addresses:
     lock:
@@ -104,6 +123,7 @@ calculator:
     bitcoin: []
     bitcoin-runes: []
     doge: []
+    firo: []
     ethereum: []
     binance: []
 healthCheck:
@@ -115,6 +135,8 @@ healthCheck:
   bitcoinScannerCriticalDiff: 5
   dogeScannerWarnDiff: 3
   dogeScannerCriticalDiff: 5
+  firoScannerWarnDiff: 3
+  firoScannerCriticalDiff: 5
   ethereumScannerWarnDiff: 3
   ethereumScannerCriticalDiff: 5
   binanceScannerWarnDiff: 3
