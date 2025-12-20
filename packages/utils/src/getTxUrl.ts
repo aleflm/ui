@@ -16,6 +16,7 @@ const baseTxURLs: { [key in Network]: string } = {
   [NETWORKS['bitcoin-runes'].key]: 'https://uniscan.cc/tx',
   [NETWORKS.ethereum.key]: 'https://etherscan.io/tx',
   [NETWORKS.doge.key]: 'https://blockexplorer.one/dogecoin/mainnet/tx',
+  [NETWORKS.firo.key]: 'https://explorer.firo.org/tx',
 };
 
 export const getTxURL = (

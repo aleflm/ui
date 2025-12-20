@@ -237,3 +237,6 @@ export { default as ErgoRaw } from './networks/ergo.svg?raw';
 
 export { ReactComponent as Ethereum } from './networks/ethereum.svg';
 export { default as EthereumRaw } from './networks/ethereum.svg?raw';
+
+export { ReactComponent as Firo } from './networks/firo.svg';
+export { default as FiroRaw } from './networks/firo.svg?raw';
