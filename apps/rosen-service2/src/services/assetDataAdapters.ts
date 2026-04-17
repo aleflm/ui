@@ -82,7 +82,7 @@ export class AssetDataAdapterService extends PeriodicTaskService {
    * @example
    * const adapter = createDataAdapter(NETWORKS.bitcoin.key, { url: "https://blockstream.info" });
    */
-  protected createChainSpecificDataAdapter = (chain: ChainChoices) => {
+  protected createChainSpecificDataAdapter = (chain: keyof Chains) => {
     const tokenMap = TokensConfig.getInstance().getTokenMap();
 
     const addresses: string[] = [
