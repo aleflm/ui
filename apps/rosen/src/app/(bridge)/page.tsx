@@ -15,7 +15,6 @@ import {
 } from '@/hooks';
 
 import { BridgeForm } from './BridgeForm';
-import { FiroPaymentQr } from './FiroPaymentQr';
 import { SubmitButton } from './SubmitButton';
 import { TransactionInfo } from './TransactionInfo';
 import { WalletInfo } from './WalletInfo';
@@ -50,7 +49,6 @@ const RosenBridge = () => {
                 <TransactionFeesProvider>
                   <div className="form">
                     <BridgeForm />
-                    <FiroPaymentQr />
                   </div>
                   <div className="info">
                     <WalletInfo />
